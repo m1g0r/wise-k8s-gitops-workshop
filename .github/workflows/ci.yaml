@@ -13,9 +13,8 @@ jobs:
        DOCKER_BUILDKIT: "1"
  
     steps:
- 
      - name: Checkout code
        uses: actions/checkout@v2
- 
+
      - name: Run linter
-       run: black ./app
+       run: make lint
