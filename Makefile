@@ -11,9 +11,7 @@ lint: ## install and run linter
 
 build:
 	@echo "Start build ${BUILD}"
-	docker build --progress plain \
-	--target app . --build-arg APP_BUILD_INFO=${BUILD} \
-	--tag m1g0r/demo-app:${BUILD}
+	docker build -t m1g0r/demo-app:${BUILD} ./app/ --progress plain
 
 push:
 	@echo "Push it"
