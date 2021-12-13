@@ -18,3 +18,22 @@ jobs:
 
      - name: Run linter
        run: make lint
+
+     - name: Login to DockerHub
+       uses: docker/login-action@v1 
+       with:
+         username: ${{ secrets.DOCKER_USERNAME }}
+         password: ${{ secrets.DOCKER_PASSWORD }}
+ 
+     - name: Declare SHA vars to use on other actions
+       id: vars
+       shell: bash
+       run: |
+         echo "GITHUB_SHA: ${GITHUB_SHA}"
+         echo "::set-output name=sha_short::${GITHUB_SHA::7}"  
+ 
+     - name: Run build
+       run: make build
+
+     - name: Run push
+       run: make push
