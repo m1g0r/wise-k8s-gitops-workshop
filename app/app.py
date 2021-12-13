@@ -8,7 +8,7 @@ def get_ip():
     ip_address = request.remote_addr
     return jsonify(
         {
-            "Version": "v1",
+            "Version": "v0.1",
             "message": "Wellcome to Wise GitOps Workshop",
             "Requester": f"{ip_address}",
         }
