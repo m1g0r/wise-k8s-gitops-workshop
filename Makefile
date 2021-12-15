@@ -9,10 +9,10 @@ lint: ## install and run linter
 	pip3 install black
 	black ./app
 
-build:
+build: ## build docker image for demo app
 	@echo "Start build ${BUILD}"
 	docker build -t m1g0r/demo-app:${BUILD} ./app/ --progress plain
 
-push:
+push: ## push docker to dockerhub
 	@echo "Push it"
 	docker push m1g0r/demo-app:${BUILD}
