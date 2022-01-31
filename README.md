@@ -13,6 +13,9 @@ kubectl apply -f nginx-ingress-controller/install.yaml
 kubectl apply -f argocd/install.yaml -n argocd
 kubectl apply -f argocd/ingress.yaml
 ```
-
+## Delete local cluster
+```
+make clean
+```
 ## Documentation and examples
 https://github.com/codefresh-contrib/gitops-certification-examples

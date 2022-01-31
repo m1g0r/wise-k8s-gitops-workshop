@@ -19,3 +19,6 @@ push: ## Push docker image to dockerhub
 
 cluster: ## Create local Kubernetes cluster with Kind
 	kind create cluster --config kind-cluster/cluster.yaml
+
+clean: ## Delete local cluster
+	kind delete cluster --name wise-k8s
