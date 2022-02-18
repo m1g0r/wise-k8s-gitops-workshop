@@ -12,6 +12,7 @@ linux-init: ## install Kind and kubectl for Linux
 	curl -LO https://dl.k8s.io/release/v1.21.0/bin/linux/amd64/kubectl
 	chmod +x ./kubectl
 	mv ./kubectl ~/.local/bin/kubectl
+	alias k=~/.local/bin/kubectl
 
 mac-init: ## install Kind and kubectl for Mac
 	curl -Lo ./kind https://kind.sigs.k8s.io/dl/v0.11.1/kind-darwin-amd64
@@ -20,6 +21,7 @@ mac-init: ## install Kind and kubectl for Mac
 	curl -LO "https://dl.k8s.io/release/v1.21.0/bin/darwin/amd64/kubectl"
 	chmod +x ./kubectl
 	mv ./kubectl ~/.local/bin/kubectl
+	alias k=~/.local/bin/kubectl
 
 lint: ## Install and run linter 
 	pip3 install black
@@ -34,7 +36,7 @@ push: ## Push docker image to dockerhub
 	docker push m1g0r/demo-app:${BUILD}
 
 cluster: ## Create local Kubernetes cluster with Kind
-	kind create cluster --config kind-cluster/cluster.yaml
+	~/.local/bin/kind create cluster --config kind-cluster/cluster.yaml
 
 clean: ## Delete local cluster
-	kind delete cluster --name wise-k8s
+	~/.local/bin/kind delete cluster --name wise-k8s
