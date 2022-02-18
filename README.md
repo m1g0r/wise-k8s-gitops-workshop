@@ -14,7 +14,7 @@ make help
 ```
 make mac-init
 ```
-### For Linux user:
+### For Linux/WinWSL user:
 ```
 make linux-init
 ```
