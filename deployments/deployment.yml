@@ -16,9 +16,9 @@ spec:
     spec:
       containers:
       - name: demo-app
-        image: m1g0r/demo-app:49f7fa8
+        image: m1g0r/demo-app:9c08002
         ports:
           - containerPort: 5000
         env:
           - name: APP_VERSION
-            value: "v0.2"
+            value: "v0.3"
