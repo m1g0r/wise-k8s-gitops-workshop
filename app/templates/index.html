@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1>Wellcome to Wise GitOps Workshop!</h1>
+    <center><h1>Wellcome to Wise GitOps Workshop!</h1></center>
     <div class="container">
         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                 viewBox="0 0 250 130" enable-background="new 0 0 250 130" xml:space="preserve">
@@ -229,12 +229,14 @@
             </g>
             </svg>
           </div>
-          <h3>System Data:</h3>
-          <ul>
-            <li>Date: {{ utc_dt }}</li>
-            <li>Requester IP: {{ ip_address }}</li>
-            <li>App Version: {{ version }}</li>
-          </ul>
+          <div class="systemdata">
+            <h3>System Data:</h3>
+            <ul>
+                <li>DateTime: {{ now_dt }}</li>
+                <li>Requester IP: {{ ip_address }}</li>
+                <li>App Version: {{ version }}</li>
+            </ul>
+          </div>
           <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
           <script src="{{url_for('static', filename='windmill.js')}}"></script>      
 {% endblock %}

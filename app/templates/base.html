@@ -4,15 +4,35 @@
     <meta charset="UTF-8">
     <title>{% block title %} {% endblock %} - Wise GitOps Workshop</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
         nav a {
-            color: #000000;
+            font-family: 'Roboto', sans-serif;
             font-size: 2em;
-            margin-left: 50px;
+            background-color: darkcyan;
+            border: none;
+            color: white;
+            padding: 5px 20px;
+            text-align: center;
             text-decoration: none;
+            display: inline-block;
+            border-radius: 2px;
+        }
+        .content {
+            font-family: 'Roboto', sans-serif;
+            width: 700px;
+            background-color: lightcyan;
         }
         .container {
+            font-family: 'Roboto', sans-serif;
             width: 700px;
             height: 360px;
+            background-color: lightcyan;
+        }
+        .systemdata {
+            font-family: 'Roboto', sans-serif;
+            background-color:aquamarine;
+            width: 680px;
+            padding:10px 10px 10px 10px;
         }
     </style>
 </head>
@@ -20,6 +40,7 @@
     <nav>
         <a href="/">DemoApp</a>
         <a href="https://github.com/m1g0r/wise-k8s-gitops-workshop" target="_blank">About Workshop</a>
+        <a href="#">Version: {{ version }}</a>
     </nav>
     <hr>
     <div class="content">
