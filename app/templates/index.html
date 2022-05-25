@@ -230,9 +230,11 @@
             </svg>
           </div>
           <h3>System Data:</h3>
-          <p>Date: {{ utc_dt }}</p>
-          <p>Requester IP: {{ ip_address }}</p>
-          <p>App Version: {{ version }}</p>
+          <ul>
+            <li>Date: {{ utc_dt }}</li>
+            <li>Requester IP: {{ ip_address }}</li>
+            <li>App Version: {{ version }}</li>
+          </ul>
           <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
           <script src="{{url_for('static', filename='windmill.js')}}"></script>      
 {% endblock %}
