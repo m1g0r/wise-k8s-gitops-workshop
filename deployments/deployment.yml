@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: demo-app
-        image: m1g0r/demo-app:728fb4a
+        image: m1g0r/demo-app:5f5e5b1
         ports:
           - containerPort: 5000
         env:
