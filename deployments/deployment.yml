@@ -5,7 +5,7 @@ metadata:
   name: demo-app-deployment
   namespace: default
 spec:
-  replicas: 2
+  replicas: 3
   selector:
     matchLabels:
       app: demo-app
@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: demo-app
-        image: m1g0r/demo-app:5f5e5b1
+        image: m1g0r/demo-app:728fb4a
         ports:
           - containerPort: 5000
         env:
